@@ -1,0 +1,424 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="iit_default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <model name="walk-area">
+      <static>true</static>
+      
+      <pose>-2 0 0 0 0 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4 0.5 0.01</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4 0.5 0.01</size>
+            </box>
+          </geometry>
+
+          <material>
+            <script>
+            <uri>model://iit_gazebo_models/materials/scripts</uri>
+            <uri>model://iit_gazebo_models/materials/textures</uri>
+            <name>iit_gazebo_models/ground</name>
+            </script>
+          </material>
+
+        </visual>
+      </link>
+    </model>
+    
+    <model name="obstacle">
+      <static>true</static>
+      
+      <pose>-3 0 0 0 0 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.1</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="brick-1">
+      <static>true</static>
+      
+      <pose>-2.0 -0.1 0 0 0 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="brick-2">
+      <static>true</static>
+      
+      <pose>-1.8 0.1 0 0 0 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    
+    <model name="brick-3">
+      <static>true</static>
+      
+      <pose>-1.6 -0.1 0 0 0 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="brick-4">
+      <static>true</static>
+      
+      <pose>-1.4 0.1 0 0 0 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.05 0.20 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="ramp">
+      <static>true</static>
+      
+      <pose>0 0 0.25 0 -0.523599 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 0.5 0.01</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 0.5 0.01</size>
+            </box>
+          </geometry>
+          
+          <material>
+            <script>
+            <uri>model://iit_gazebo_models/materials/scripts</uri>
+            <uri>model://iit_gazebo_models/materials/textures</uri>
+            <name>iit_gazebo_models/ground</name>
+            </script>
+          </material>
+        
+          </visual>
+      </link>
+    </model>
+    
+    <model name="box-1">
+      <static>true</static>
+      
+      <pose>-0.43 0.0 0.0 0 -0.523599 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="box-2">
+      <static>true</static>
+      
+      <pose>-0.3464 0.0 0.05 0 -0.523599 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="box-3">
+      <static>true</static>
+      
+      <pose>-0.2598 0.0 0.1 0 -0.523599 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="box-4">
+      <static>true</static>
+      
+      <pose>-0.1732 0.0 0.15 0 -0.523599 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="box-5">
+      <static>true</static>
+      
+      <pose>-0.0866 0.0 0.2 0 -0.523599 0</pose>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.01 0.5 0.03</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
